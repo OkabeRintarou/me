@@ -1,0 +1,16 @@
+digraph  for2 {
+	node[shape=box];
+    
+    B0[label="B0:\l(1) loop-initialize\l(2) goto (5)\l"];
+    B1[label="B1:\l(3) loop-body\l(4) loop-increment\l"];
+    B2[label="B2:\l(5) if loo-test goto (3)"];
+    B3[label="B3:\l(6) ..."];
+
+
+
+    B2 -> B1;
+    B1 -> B2;
+    B0 -> B2;
+    B2 -> B3;
+
+}
